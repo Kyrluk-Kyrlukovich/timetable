@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Timetable from '@/views/Timetable'
-import SearchView from "@/views/SearchView";
+import Timetable from '@/pages/TimetablePage'
+import SearchPage from "@/pages/SearchPage";
 const routes = [
-  { path: '/timetable/:id', component: Timetable},
-  { path: '/', component: SearchView},
+  { path: '/:group', component: Timetable, name: 'timetable'},
+  // { path: '/:group', component: test2page, name: 'test2'},
+  { path: '/', component: SearchPage, name: 'home'},
 ]
 
 const router = createRouter({

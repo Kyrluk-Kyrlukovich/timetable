@@ -1,25 +1,36 @@
-<template>
-    <RouterView/>
+<template  >
+  <div class="min-h-screen pb-[2em] overflow-x-clip text-[11px] sm:text-[13px] md:text-[15px] lg:text-[14px]   font-mont sm:tracking-[-.05em] md:tracking-normal bg-gradient-to-r from-cyan-400 to-blue-600">
+    <RouterView class="overflow-x-clip"/>
+  </div>
+
 </template>
 <script>
+import {mapActions} from "vuex";
+
+export default{
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+    ...mapActions({
+      fetchClasses: 'fetchClasses',
+    }),
+  },
+  created() {
+    this.fetchClasses()
+  }
+}
 </script>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap%2");
 
 #app {
-  height: 100vh;
-  width: 100vw;
-  font-family: Arial, sans-serif;
-  background:
-      linear-gradient(0deg, rgba(0, 13, 255, 0.54) 30%, rgba(0, 255, 0, 0)),
-      linear-gradient(0deg, rgba(255,255, 255, 0.8) 70%, rgba(0,255,0,0) ),
-      linear-gradient(90deg, rgba(255,255, 255, 0.8) 90%, rgba(0,255,0,0) ),
-      linear-gradient(180deg, rgba(0, 13, 255, 0.84) 50%, rgba(0, 255, 0, 0))
-  ;
-
-
+  overflow-x: clip;
   }
 
-#input-group:focus{outline:none;}
+
 
 * {
   padding: 0;

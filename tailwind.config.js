@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{vue,js}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'mont': ['Montserrat']
+    },
+    extend: {
+
+    },
   },
   plugins: [],
 }
